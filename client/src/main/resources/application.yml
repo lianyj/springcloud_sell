@@ -1,0 +1,9 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.10.67:8761/eureka/ # 注册中心配置 (高可用配置)
+#  instance:
+#    hostname: clientName  #自定义链接
+spring:
+  application:
+    name: client  # 应用的名字

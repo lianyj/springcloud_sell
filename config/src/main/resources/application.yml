@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/lianyj/config-repo
+          password: 631258447@qq.com
+          username: a82688055
+          basedir: F:\lyj\basedir
+        bootstrap: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.10.67:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+

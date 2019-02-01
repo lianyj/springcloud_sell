@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: order
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: test
+    stream:
+      binders:
+        input:
+          group: order  #只发送给一个实例，消息分组
+          content-type: application/json
+
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    password: guest
+    username: guest
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.10.67:8761/eureka/
+
